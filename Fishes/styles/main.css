@@ -4,6 +4,42 @@ body, html {
     width:100%;
 }
 
+#home{
+    width:100%;
+    height:auto;
+    margin:8% 0;
+}
+#tableButton{
+    width:100%;
+    text-align:center;
+}
+.prev {
+    font-size:1.3em;
+    width:40%;
+    margin-right:38%;
+}
+.next{
+    font-size:1.3em;
+    width:70%;
+   
+}
+#fishes-holder{
+    text-align:center;
+}
+#takePicture{
+    width:70%;
+    font-size:1.3em;
+}
+
+#user{
+    margin-left:3%;
+    width:50%;
+    font-size:1.3em;
+}
+#fishes-holder{
+     font-size:1.0em;
+}
+
 /* COMMON STYLES*/
 .view-content h1{
     color:#42454a;

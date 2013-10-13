@@ -2,42 +2,52 @@
      id="encyclopedy-view" 
      data-id="encyclopedy-view"
      data-layout="tabstrip-layout" 
-	 data-title="Encyclopedy"
+	 data-title="Encyclopedia"
      data-show="app.fishes.init"
-     selectable = "single">
+     selectable = "single"
+    >
     <div id="fishes-holder">
-        <a data-role="backbutton" id="next">Back</a>
-        <a data-role="button" id="prev">Prev</a>
-        <a data-role="button" id="next">Next page</a>
-        
-          <ul 
-              id="encyclopedy-listview" 
-              data-id="encyclopedy-listview"
-              data-role="listview" 
-              data-bind="source: fishes" 
-              data-style="inset"
-              data-template="place-template"></ul>  
-        
+          <!-- <a data-role="backbutton" id="next">Back</a>-->
+        <table id="tableButton">
+            <tr>
+                <td><a data-role="button" class="prev" id="buttonPrev">Previous</a></td>
+                <td><a data-role="button" class="next" id="buttonNext">Next</a></td>
+            </tr>
+        </table>
+        <ul 
+           id="encyclopedy-listview" 
+           data-id="encyclopedy-listview"
+           data-role="listview" 
+           data-bind="source: fishes" 
+           data-style="inset"
+           data-template="place-template">
+        </ul>
+        <table id="tableButton">
+            <tr>
+                <td><a data-role="button" class="prev" id="buttonPrev">Previous</a></td>
+                <td><a data-role="button" class="next" id="buttonNext">Next</a></td>
+            </tr>
+        </table>
     </div>
     
     <script>
-            $("#next").click(function() {
+        $(".next").click(function() {
             app.pageCount++;
                 
             if (app.pageCount == 37) {
                 app.pageCount = 1;
             }
-            
-            
-            app.fishes.reload();  
-            });
-        $("#prev").click(function() {
+        
+            app.fishes.reload();
+        });
+        
+        $(".prev").click(function() {
             app.pageCount--;
                 
             if (app.pageCount == 0) {
-                app.pageCount = 37;
+                app.pageCount = 36;
             }
             app.fishes.reload();  
-            });
+        });
     </script>
 </div>

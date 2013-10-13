@@ -5,25 +5,11 @@ data-id="galery-view"
 	 data-title="Galery"
      data-show="app.allPictures.init">
     <div id="fishes-holder">
-       <!--<input type="file" id="profilePhotoFileUpload">
-        <a data-role="button" id="sub" >submit</a>--> 
-        <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
-          <fieldset>
-            <input type="file" name="fileselect" id="profilePhotoFileUpload"/>
-            <input id="sub" type="button" value="Upload to Parse"/>
-          </fieldset>
-        </form>
-        
-        
-          <ul data-role="listview" data-bind="source: allPictures" ></ul>                
+        <a data-role="button" data-bind="click:change" id="takePicture">Take a picture</a>
+        <div style="display:inline-block;">Username : </div>
+        <input type="text" id="user" data-bind="value: username"/>
+        <img id="myImage" style="width:100px;height:auto;"/>
+        <ul data-role="listview" data-bind="source: allPictures"  data-template="galery-template"></ul> 
     </div>
-    <script>
-        
-            $("#sub").click(function(e) {
-                console.log("innn");
-                app.createFile();
-            });
-       
-    </script>
 </div>
 
